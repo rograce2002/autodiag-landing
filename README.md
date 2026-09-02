@@ -21,13 +21,25 @@ https://rograce2002.github.io/autodiag-landing/
 
 1. Copier l'APK release signé depuis le dépôt `autoDiag` :
    `app/build/outputs/apk/release/AutoDiag-Congo-vX.Y.Z-release.apk`
-2. **Releases → Draft a new release** sur ce dépôt
-3. Tag : `vX.Y.Z` (ex. `v2.0.0`)
-4. Attacher l'APK avec le **même nom** que dans `index.html`
-5. Mettre à jour le `href` du bouton dans `index.html` si la version change
-6. Commit + push sur `main`
+2. Uploader sur Firebase Storage (bucket hub DiagSync) :
 
-URL de téléchargement direct (format) :
+```bash
+gsutil -h "Content-Type:application/vnd.android.package-archive" \
+  cp AutoDiag-Congo-vX.Y.Z-release.apk \
+  gs://studio-1332800635-78fb6.firebasestorage.app/public/autodiag/releases/AutoDiag-Congo-vX.Y.Z-release.apk
+```
+
+3. Mettre à jour le `href` du bouton dans `index.html` (URL Firebase Storage)
+4. Mettre à jour `NEXT_PUBLIC_AUTODIAG_PUBLIC_APK_URL` dans ExpertDiag Shop
+5. Commit + push sur `main` (landing) ; redéployer App Hosting si besoin
+
+URL de téléchargement direct (format Firebase Storage) :
+
+```
+https://firebasestorage.googleapis.com/v0/b/studio-1332800635-78fb6.firebasestorage.app/o/public%2Fautodiag%2Freleases%2FAutoDiag-Congo-v2.0.0-release.apk?alt=media
+```
+
+Fallback GitHub Release (optionnel) :
 
 ```
 https://github.com/rograce2002/autodiag-landing/releases/download/v2.0.0/AutoDiag-Congo-v2.0.0-release.apk
