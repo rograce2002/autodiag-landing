@@ -2,240 +2,200 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Téléchargez AutoDiag Congo 2.0.0 — diagnostic OBD2, vérification de devis garage et assistant à l'achat pour Android.">
-  <title>AutoDiag Congo 2.0.0 — Téléchargement Android</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Téléchargez AutoDiag Congo 2.0.0 — solution mobile de diagnostic automobile et d'aide à la décision pour Android.">
+  <meta name="theme-color" content="#1e1b4b">
+  <title>AutoDiag Congo — Téléchargement</title>
   <style>
     :root {
-      --navy: #0D2137;
-      --red: #CC2200;
-      --orange: #FF6B00;
-      --bg: #f4f6f8;
-      --muted: #64748b;
-      --card: #ffffff;
+      --blue-deep: #1e1b4b;
+      --blue-mid: #312e81;
+      --violet: #6366f1;
+      --violet-light: #818cf8;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-500: #64748b;
+      --gray-700: #334155;
     }
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(160deg, var(--bg) 0%, #e8ecf1 100%);
-      color: var(--navy);
+      min-height: 100dvh;
+      background: linear-gradient(165deg, var(--blue-deep) 0%, var(--blue-mid) 45%, #4338ca 100%);
+      color: var(--white);
       line-height: 1.5;
+      padding: env(safe-area-inset-top) 1rem env(safe-area-inset-bottom);
     }
     .wrap {
-      max-width: 420px;
+      max-width: 400px;
       margin: 0 auto;
-      padding: 2rem 1.25rem 3rem;
+      padding: 1.5rem 0 2rem;
     }
-    .badge {
-      display: inline-block;
-      background: rgba(13, 33, 55, 0.08);
-      color: var(--navy);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.75rem;
+    .play-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.45rem 0.85rem;
       border-radius: 999px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .play-badge svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.85;
     }
     .card {
-      background: var(--card);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(13, 33, 55, 0.1);
-      overflow: hidden;
-    }
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
-      color: #fff;
-      padding: 2rem 1.75rem 1.75rem;
-      text-align: center;
+      background: var(--white);
+      color: var(--gray-700);
+      border-radius: 24px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
     }
     .logo {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 1rem;
-      background: var(--red);
-      border-radius: 16px;
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--violet) 0%, var(--blue-mid) 100%);
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.75rem;
+      font-size: 1.25rem;
       font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--blue-deep);
       letter-spacing: -0.02em;
+      line-height: 1.2;
     }
-    .hero h1 {
-      margin: 0 0 0.5rem;
-      font-size: 1.5rem;
-      font-weight: 800;
-    }
-    .hero .version {
-      font-size: 0.85rem;
-      opacity: 0.75;
-      margin-bottom: 0.75rem;
-    }
-    .hero p {
-      margin: 0;
+    .subtitle {
+      margin-top: 0.5rem;
       font-size: 0.95rem;
-      opacity: 0.9;
-      line-height: 1.55;
+      color: var(--gray-500);
+      line-height: 1.45;
     }
-    .body {
-      padding: 1.75rem;
-    }
-    .features {
-      list-style: none;
-      margin: 0 0 1.5rem;
-      padding: 0;
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-    .features li {
-      padding: 0.35rem 0 0.35rem 1.5rem;
-      position: relative;
-    }
-    .features li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--orange);
-      font-weight: 700;
+    .version {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--violet);
+      background: rgba(99, 102, 241, 0.1);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
     }
     .btn {
       display: block;
       width: 100%;
-      text-align: center;
-      background: linear-gradient(135deg, var(--red) 0%, #a81b00 100%);
-      color: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      text-decoration: none;
+      margin-top: 1.75rem;
+      padding: 1.05rem 1.25rem;
+      background: linear-gradient(135deg, var(--violet) 0%, #4f46e5 100%);
+      color: var(--white);
+      font-size: 1.05rem;
       font-weight: 700;
-      font-size: 1rem;
-      box-shadow: 0 4px 14px rgba(204, 34, 0, 0.35);
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(204, 34, 0, 0.4);
-    }
-    .btn-secondary {
-      display: block;
       text-align: center;
-      margin-top: 0.75rem;
-      color: var(--orange);
-      font-size: 0.85rem;
-      font-weight: 600;
       text-decoration: none;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45);
+      transition: transform 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
     }
-    .note {
-      margin-top: 1.25rem;
-      padding: 1rem;
-      background: #fff8f3;
-      border: 1px solid rgba(255, 107, 0, 0.25);
-      border-radius: 12px;
+    .btn:active { transform: scale(0.98); }
+    .guide {
+      margin-top: 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    .guide h2 {
       font-size: 0.8rem;
-      color: var(--muted);
-    }
-    .note strong { color: var(--navy); }
-    .steps {
-      margin-top: 1.5rem;
-    }
-    .steps h2 {
-      font-size: 0.75rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--muted);
-      margin: 0 0 0.75rem;
+      color: var(--blue-deep);
+      margin-bottom: 0.85rem;
     }
-    .steps ol {
-      margin: 0;
-      padding-left: 1.25rem;
-      font-size: 0.85rem;
-      color: var(--navy);
+    .guide ol {
+      padding-left: 1.15rem;
+      font-size: 0.88rem;
+      color: var(--gray-700);
     }
-    .steps li { margin-bottom: 0.5rem; }
+    .guide li {
+      margin-bottom: 0.65rem;
+      padding-left: 0.25rem;
+    }
+    .guide li strong { color: var(--blue-deep); }
     footer {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       text-align: center;
-      font-size: 0.78rem;
-      color: var(--muted);
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.55);
     }
     footer a {
-      color: var(--orange);
+      color: rgba(255, 255, 255, 0.75);
       text-decoration: none;
-    }
-    footer a:hover { text-decoration: underline; }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem 1rem;
-      margin-top: 0.75rem;
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <span class="badge">Android · Congo</span>
+    <div class="play-badge" aria-label="Bientôt disponible sur Google Play">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/>
+      </svg>
+      Bientôt disponible sur Google Play
+    </div>
+
     <div class="card">
-      <div class="hero">
-        <div class="logo" aria-hidden="true">AD</div>
-        <h1>AutoDiag Congo</h1>
-        <p class="version">Version 2.0.0 · build 200</p>
-        <p>
-          Votre garagiste annonce un montant ? Vérifiez-le. Scannez les codes
-          défauts OBD2, comprenez les pannes en français.
-        </p>
-      </div>
-      <div class="body">
-        <ul class="features">
-          <li>Scan OBD2 ELM327 (Bluetooth BLE ou Classic)</li>
-          <li>Vérification de devis garage</li>
-          <li>Assistant à l'achat véhicule d'occasion</li>
-          <li>Carnet d'entretien et décodage VIN</li>
-        </ul>
+      <div class="logo" aria-hidden="true">AD</div>
+      <h1>AutoDiag Congo</h1>
+      <p class="subtitle">
+        Solution mobile de diagnostic automobile et d'aide à la décision.
+      </p>
+      <span class="version">v2.0.0 · Android</span>
 
-        <a
-          href="https://github.com/rograce2002/autodiag-landing/releases/download/v2.0.0/AutoDiag-Congo-v2.0.0-release.apk"
-          class="btn"
-          id="download-btn"
-        >
-          Télécharger l'APK (Android)
-        </a>
-        <a href="https://shop.expertdiag-congo.com/autodiag" class="btn-secondary">
-          Acheter un adaptateur OBD2 →
-        </a>
+      <a
+        href="https://github.com/rograce2002/autodiag-landing/releases/download/v2.0.0/AutoDiag-Congo-v2.0.0-release.apk"
+        class="btn"
+        id="download-btn"
+      >
+        Télécharger l'application (APK)
+      </a>
 
-        <div class="note">
-          <strong>En attendant Google Play Store.</strong>
-          Téléchargement direct officiel ExpertDiag Congo (RAND SARLU).
-          Si Android bloque l'installation, autorisez
-          «&nbsp;Sources inconnues&nbsp;» pour votre navigateur ou gestionnaire
-          de fichiers, puis rouvrez le fichier APK.
-        </div>
-
-        <div class="steps">
-          <h2>Installation</h2>
-          <ol>
-            <li>Touchez le bouton ci-dessus pour télécharger l'APK.</li>
-            <li>Ouvrez le fichier téléchargé depuis vos notifications ou Fichiers.</li>
-            <li>Confirmez l'installation et lancez AutoDiag Congo.</li>
-          </ol>
-        </div>
-      </div>
+      <section class="guide" aria-labelledby="guide-title">
+        <h2 id="guide-title">Guide d'installation</h2>
+        <ol>
+          <li>Touchez le bouton ci-dessus pour télécharger le fichier APK.</li>
+          <li>
+            Si Android affiche un avertissement, allez dans
+            <strong>Paramètres → Sécurité</strong> (ou
+            <strong>Applications</strong>) et autorisez
+            <strong>l'installation d'applications de sources inconnues</strong>
+            pour votre navigateur ou gestionnaire de fichiers.
+          </li>
+          <li>Ouvrez le fichier téléchargé et confirmez l'installation.</li>
+          <li>Lancez AutoDiag Congo et connectez-vous.</li>
+        </ol>
+      </section>
     </div>
 
     <footer>
-      <p>RAND SARLU / ExpertDiag Congo · Brazzaville</p>
-      <div class="links">
+      <p>RAND SARLU · ExpertDiag Congo</p>
+      <p style="margin-top:0.35rem">
         <a href="https://shop.expertdiag-congo.com/autodiag">Boutique</a>
-        <a href="https://mutuka.pro">Mutuka</a>
-        <a href="mailto:info@expertdiag-congo.com">Support</a>
-        <a href="https://expertdiag-congo.com/privacy">Confidentialité</a>
-      </div>
+        · <a href="https://mutuka.pro">Mutuka</a>
+        · <a href="mailto:info@expertdiag-congo.com">Support</a>
+      </p>
     </footer>
   </div>
 </body>
