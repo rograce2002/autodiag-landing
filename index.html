@@ -3,9 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Téléchargez AutoDiag Congo 2.0.0 — solution mobile de diagnostic automobile et d'aide à la décision pour Android.">
+  <meta name="description" content="Installez AutoDiag Congo 2.1.1 sur Google Play — solution mobile de diagnostic automobile et d'aide à la décision pour Android.">
   <meta name="theme-color" content="#1e1b4b">
-  <title>AutoDiag Congo — Téléchargement</title>
+  <link rel="canonical" href="https://rograce2002.github.io/autodiag-landing/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="AutoDiag Congo">
+  <meta property="og:url" content="https://rograce2002.github.io/autodiag-landing/">
+  <meta property="og:title" content="AutoDiag Congo — Disponible sur Google Play">
+  <meta property="og:description" content="Installez AutoDiag Congo 2.1.1 sur Google Play — solution mobile de diagnostic automobile et d'aide à la décision pour Android.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AutoDiag Congo — Disponible sur Google Play">
+  <meta name="twitter:description" content="Installez AutoDiag Congo 2.1.1 sur Google Play — solution mobile de diagnostic automobile et d'aide à la décision pour Android.">
+  <title>AutoDiag Congo — Disponible sur Google Play</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AutoDiag Congo",
+      "operatingSystem": "Android",
+      "applicationCategory": "UtilitiesApplication",
+      "softwareVersion": "2.1.1",
+      "inLanguage": "fr",
+      "description": "Installez AutoDiag Congo 2.1.1 sur Google Play — solution mobile de diagnostic automobile et d'aide à la décision pour Android.",
+      "url": "https://rograce2002.github.io/autodiag-landing/",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.autodiag.congo",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RAND SARLU"
+      }
+    }
+  </script>
   <style>
     :root {
       --blue-deep: #1e1b4b;
@@ -32,25 +60,6 @@
       max-width: 400px;
       margin: 0 auto;
       padding: 1.5rem 0 2rem;
-    }
-    .play-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      padding: 0.45rem 0.85rem;
-      border-radius: 999px;
-      margin-bottom: 1.25rem;
-    }
-    .play-badge svg {
-      width: 14px;
-      height: 14px;
-      opacity: 0.85;
     }
     .card {
       background: var(--white);
@@ -95,23 +104,24 @@
       padding: 0.25rem 0.65rem;
       border-radius: 6px;
     }
-    .btn {
-      display: block;
-      width: 100%;
-      margin-top: 1.75rem;
-      padding: 1.05rem 1.25rem;
-      background: linear-gradient(135deg, var(--violet) 0%, #4f46e5 100%);
-      color: var(--white);
-      font-size: 1.05rem;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45);
-      transition: transform 0.15s ease;
+    .store-link {
+      display: flex;
+      justify-content: center;
+      width: fit-content;
+      margin: 1.75rem auto 0;
+      line-height: 0;
+      border-radius: 12px;
       -webkit-tap-highlight-color: transparent;
     }
-    .btn:active { transform: scale(0.98); }
+    .store-link img {
+      display: block;
+      height: 80px;
+      width: auto;
+    }
+    .store-link:focus-visible {
+      outline: 3px solid var(--violet);
+      outline-offset: 6px;
+    }
     .guide {
       margin-top: 1.75rem;
       padding-top: 1.5rem;
@@ -145,47 +155,43 @@
       color: rgba(255, 255, 255, 0.75);
       text-decoration: none;
     }
+    .legal {
+      margin-top: 0.65rem;
+      font-size: 0.65rem;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="play-badge" aria-label="Bientôt disponible sur Google Play">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/>
-      </svg>
-      Bientôt disponible sur Google Play
-    </div>
-
     <div class="card">
       <div class="logo" aria-hidden="true">AD</div>
       <h1>AutoDiag Congo</h1>
       <p class="subtitle">
         Solution mobile de diagnostic automobile et d'aide à la décision.
       </p>
-      <span class="version">v2.0.0 · Android</span>
+      <span class="version">v2.1.1 · Android</span>
 
       <a
-        href="https://firebasestorage.googleapis.com/v0/b/studio-1332800635-78fb6.firebasestorage.app/o/public%2Fautodiag%2Freleases%2FAutoDiag-Congo-v2.0.0-release.apk?alt=media"
-        class="btn"
-        id="download-btn"
-        download="AutoDiag-Congo-v2.0.0-release.apk"
+        class="store-link"
+        id="play-store-link"
+        href="https://play.google.com/store/apps/details?id=com.autodiag.congo"
       >
-        Télécharger l'application (APK)
+        <img
+          src="assets/google-play-badge-fr.png"
+          alt="Disponible sur Google Play"
+          width="207"
+          height="80"
+        >
       </a>
 
       <section class="guide" aria-labelledby="guide-title">
         <h2 id="guide-title">Guide d'installation</h2>
         <ol>
-          <li>Touchez le bouton ci-dessus pour télécharger le fichier APK.</li>
-          <li>
-            Si Android affiche un avertissement, allez dans
-            <strong>Paramètres → Sécurité</strong> (ou
-            <strong>Applications</strong>) et autorisez
-            <strong>l'installation d'applications de sources inconnues</strong>
-            pour votre navigateur ou gestionnaire de fichiers.
-          </li>
-          <li>Ouvrez le fichier téléchargé et confirmez l'installation.</li>
-          <li>Lancez AutoDiag Congo et connectez-vous.</li>
+          <li>Touchez le badge <strong>Disponible sur Google Play</strong>.</li>
+          <li>Sur la fiche de l'application, appuyez sur <strong>Installer</strong>.</li>
+          <li>Ouvrez AutoDiag Congo une fois l'installation terminée.</li>
+          <li>Connectez-vous pour commencer.</li>
         </ol>
       </section>
     </div>
@@ -197,6 +203,7 @@
         · <a href="https://mutuka.pro">Mutuka</a>
         · <a href="mailto:info@expertdiag-congo.com">Support</a>
       </p>
+      <p class="legal">Google Play, le logo Google Play et Android sont des marques de Google LLC.</p>
     </footer>
   </div>
 </body>
